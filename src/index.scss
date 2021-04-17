@@ -1,0 +1,90 @@
+@import "../node_modules/normalize.css/normalize";
+
+html{
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+*,*::before, *::after{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  outline: none;
+  font-family: "Roboto",-apple-system, system-ui, sans-serif;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.todo {
+  display: flex;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: calc(100vw - 100px);
+  height: calc(100vh - 100px);
+  transform: translate(-50%, -50%);
+  box-shadow: 1px 2px 20px #f3f3f3;
+  border-radius: 10px;
+  border: 1px solid #f1f1f1;
+  font-size: 14px;
+  &__sidebar{
+    background-color: #f4f6f8;
+    width: 200px;
+    height: 100%;
+    border-right: 1px solid #f1f1f1;
+    padding: 60px 20px;
+  }
+  &__tasks{
+    flex: 1;
+    padding: 60px;
+    overflow: auto;
+  }
+}
+
+
+
+
+.field{
+  background: #FFFFFF;
+  border: 1px solid #EFEFEF;
+  border-radius: 4px;
+  padding: 5px 11px;
+  width: 100%;
+}
+
+.error-input{
+  border: 1px solid red;
+}
+
+.btn-add{
+  background-color: #4DD599;
+  color: #ffffff;
+  border-radius: 4px;
+  border: none;
+  text-align: center;
+  padding: 8px 12px;
+  cursor: pointer;
+  &:hover{
+    background-color: darken(#4DD599, 6%);
+  }
+  &:active{
+    background-color: darken(#4DD599, 10%);
+  }
+  &:disabled{
+    background-color: #d8d8d8;
+  }
+  &--grey{
+    background-color: #F4F6F8;
+    color: #9C9C9C;
+    &:hover{
+      background-color: darken(#F4F6F8, 3%);
+    }
+    &:active{
+      background-color: darken(#F4F6F8, 6%);
+    }
+  }
+}
