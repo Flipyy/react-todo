@@ -21,9 +21,9 @@ const AddTaskForm = ({list, onAddTask}) => {
             return setErrorValue("error-input")
         }
         const obj = {
-            "listId": list.id,
-            "text": inputValue,
-            "completed": false
+            listId: list.id,
+            text: inputValue,
+            completed: false
         }
         setIsLoading(true)
         axios.post("http://localhost:3001/tasks", obj).then(({data}) => {
